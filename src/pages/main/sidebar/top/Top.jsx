@@ -4,7 +4,7 @@ import { GoHomeFill, GoSearch } from 'react-icons/go'
 
 const Top = () => {
   return (
-    <div className='w-full h-auto bg-neutral-800/30 rounded-md px-6 py-5 space-y-5'>
+    <div className='w-full h-40 bg-neutral-800/30 rounded-md px-6 py-5 space-y-5'>
         <div className="flex items-center gap-x-0.5 text-neutral-50">
             <FaSpotify className='w-6 h-6' />
             <p className="text-base font-medium tracking-tight">Spotify</p>
