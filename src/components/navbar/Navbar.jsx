@@ -1,11 +1,8 @@
-import React from 'react'
-import { LuChevronLeft, LuChevronRight } from 'react-icons/lu'
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 
 const Navbar = () => {
     return (
-        <div className='w-full flex items-center bg-neutral-950/75 justify-between px-5 py-4 fixed top-2 z-50'>
-
+        <nav className="w-full bg-[#111113] flex items-center justify-between pl-5 pr-7 py-2 sticky top-2">
             {/* Arrow  */}
             <div className="flex items-center gap-x-2">
                 <button className="w-8 h-8 rounded-full bg-neutral-950/70 text-neutral-400 flex items-center justify-center">
@@ -17,8 +14,15 @@ const Navbar = () => {
             </div>
 
             {/* Buttons */}
-            .
-        </div>
+            <div className="flex items-center gap-x-5">
+                <button className="w-fit text-neutral-400 text-sm font-semibold hover:scale-105 ease-in-out duration-100">
+                    Sign up
+                </button>
+                <button className="w-fit px-8 h-12 rounded-full bg-neutral-50 text-base text-neutral-900 font-semibold flex items-center justify-center hover:scale-105 ease-in-out duration-100">
+                    Log in
+                </button>
+            </div>
+        </nav>
     )
 }
 
