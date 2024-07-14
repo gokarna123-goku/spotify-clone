@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
-        <div className='w-full py-20'>
+        <div className='w-full py-20 px-6'>
             <div className="grid md:grid-cols-6 sm:grid-cols-4 grid-cols-1 items-start gap-7">
                 <div className="col-span-1 space-y-3">
                     <h6 className="text-sm font-semibold text-neutral-50 tracking-wide">

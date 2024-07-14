@@ -1,6 +1,7 @@
 import React from 'react'
 import Sidebar from './sidebar/Sidebar'
 import Content from './content/Content'
+import Player from '../../components/player/Player'
 
 const Main = () => {
     return (
@@ -13,6 +14,7 @@ const Main = () => {
                 <Content />
 
                 {/* Bottom or Player */}
+                <Player />
             </div>
         </>
     )
