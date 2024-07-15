@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
-        <div className='w-full md:py-16 sm:py-14 py-10 md:px-6 sm:px-5 px-4'>
+        <div className='w-full md:py-16 sm:py-14 py-10 md:px-6 sm:px-5 px-4 space-y-10'>
             <div className="grid md:grid-cols-6 sm:grid-cols-4 grid-cols-1 items-start gap-7">
                 <div className="col-span-1 space-y-3">
                     <h6 className="text-sm font-semibold text-neutral-50 tracking-wide">
@@ -101,6 +101,8 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
+            <div className="w-full h-[1px] bg-neutral-700/40"></div>
+            <p className="text-sm text-neutral-400 font-normal">&copy; 2024 Spotify AB</p>
         </div>
     )
 }
