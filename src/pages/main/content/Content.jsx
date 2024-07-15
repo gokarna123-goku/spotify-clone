@@ -4,6 +4,7 @@ import Navbar from '../../../components/navbar/Navbar'
 import Artist from './artist/Artist'
 import Album from './album/Album'
 import Radio from './radio/Radio'
+import Podcast from './podcast/Podcast'
 
 const Content = () => {
     return (
@@ -23,9 +24,8 @@ const Content = () => {
                 {/* Popular Radio */}
                 <Radio />
 
-                {/* Featured Charts */}
-
-                {/* Spotify Playlist */}
+                {/* Podcast */}
+                <Podcast />
 
                 {/* Footer */}
                 <Footer />
