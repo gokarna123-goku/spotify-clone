@@ -11,7 +11,7 @@ const ArtistInfo = () => {
                     <p className="text-sm text-neutral-100">Verified Artist</p>
                 </div>
                 <h1 className="text-8xl font-black text-neutral-50">Artist Name</h1>
-                <p className="text-sm text-neutral-100">40,373,319 monthly listeners</p>
+                <p className="text-base text-neutral-100">40,373,319 monthly listeners</p>
             </div>
         </div>
     )
