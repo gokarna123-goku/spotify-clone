@@ -3,12 +3,13 @@ import Footer from '../../../components/footer/Footer'
 import Navbar from '../../../components/navbar/Navbar'
 import Artist from './artist/Artist'
 import Album from './album/Album'
+import Radio from './radio/Radio'
 
 const Content = () => {
     return (
         <div className='flex-1 h-[calc(100vh-8.5ch)] overflow-y-scroll overflow-x-hidden bg-neutral-800/30 rounded-md relative'>
             {/* Navbar */}
-            <div className="w-full sticky top-0">
+            <div className="w-full sticky top-0 z-50">
                 <Navbar />
             </div>
 
@@ -20,6 +21,7 @@ const Content = () => {
                 <Album />
 
                 {/* Popular Radio */}
+                <Radio />
 
                 {/* Featured Charts */}
 
