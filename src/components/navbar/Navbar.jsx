@@ -1,8 +1,8 @@
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 
-const Navbar = () => {
+const Navbar = ({ className }) => {
     return (
-        <nav className="w-full bg-[#111113] flex items-center justify-between md:pl-5 pl-4 md:pr-7 sm:pr-5 pr-4 py-2 z-50">
+        <nav className={`w-full ${className} flex items-center justify-between md:pl-5 pl-4 md:pr-7 sm:pr-5 pr-4 py-2 z-50`}>
             {/* Arrow  */}
             <div className="flex items-center gap-x-2">
                 <button className="w-8 h-8 rounded-full bg-neutral-950/70 text-neutral-400 flex items-center justify-center">
