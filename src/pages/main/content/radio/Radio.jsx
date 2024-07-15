@@ -12,13 +12,13 @@ import 'swiper/css/pagination';
 import { FreeMode } from 'swiper/modules';
 
 import Tag from '../../../../components/tag/Tag'
-import AlbumCard from '../../../../components/album/AlbumCard';
 import RadioCard from '../../../../components/radio/RadioCard';
+import breakPoints from '../../../../constant/Constant';
 
 const Radio = () => {
     return (
         <div className='w-full space-y-4'>
-            <Tag title={"Popular albums"} link={"/"} />
+            <Tag title={"Popular radio"} link={"/"} />
 
             {/* Album list */}
             <Swiper
@@ -26,6 +26,7 @@ const Radio = () => {
                 spaceBetween={false}
                 freeMode={true}
                 modules={[FreeMode]}
+                breakpoints={breakPoints}
                 className="mySwiper [&_.swiper-wrapper]:!ease-linear [&_.swiper-wrapper]:!duration-100"
             >
                 <SwiperSlide>

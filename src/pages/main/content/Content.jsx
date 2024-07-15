@@ -14,7 +14,7 @@ const Content = () => {
                 <Navbar />
             </div>
 
-            <div className="w-full h-full py-6 bg-gradient-to-b from-neutral-700/20 via-transparent to-transparent pl-5 pr-7 space-y-11">
+            <div className="w-full h-full py-6 bg-gradient-to-b from-neutral-700/20 via-transparent to-transparent md:pl-5 pl-4 md:pr-7 sm:pr-5 pr-4 space-y-11">
                 {/* Popular artists */}
                 <Artist />
 

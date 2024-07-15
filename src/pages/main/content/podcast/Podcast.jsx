@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,9 +12,8 @@ import 'swiper/css/pagination';
 import { FreeMode } from 'swiper/modules';
 
 import Tag from '../../../../components/tag/Tag'
-import { IoMdPlay } from "react-icons/io";
-import AlbumCard from '../../../../components/album/AlbumCard';
 import PodcastCard from '../../../../components/podcast/PodcastCard';
+import breakPoints from '../../../../constant/Constant';
 
 const Podcast = () => {
   return (
@@ -28,6 +26,8 @@ const Podcast = () => {
               spaceBetween={false}
               freeMode={true}
               modules={[FreeMode]}
+
+              breakpoints={breakPoints}
               className="mySwiper [&_.swiper-wrapper]:!ease-linear [&_.swiper-wrapper]:!duration-100"
           >
               <SwiperSlide>

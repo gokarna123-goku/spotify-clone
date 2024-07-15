@@ -13,8 +13,8 @@ import 'swiper/css/pagination';
 import { FreeMode } from 'swiper/modules';
 
 import Tag from '../../../../components/tag/Tag'
-import { IoMdPlay } from "react-icons/io";
 import AlbumCard from '../../../../components/album/AlbumCard';
+import breakPoints from '../../../../constant/Constant';
 
 const Album = () => {
     return (
@@ -27,6 +27,7 @@ const Album = () => {
                 spaceBetween={false}
                 freeMode={true}
                 modules={[FreeMode]}
+                breakpoints={breakPoints}
                 className="mySwiper [&_.swiper-wrapper]:!ease-linear [&_.swiper-wrapper]:!duration-100"
             >
                 <SwiperSlide>
