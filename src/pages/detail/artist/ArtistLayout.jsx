@@ -5,6 +5,7 @@ import Follow from './follow/Follow'
 import MusicList from './music/MusicList'
 import Album from '../../main/content/album/Album'
 import Footer from '../../../components/footer/Footer'
+import About from './about/About'
 
 const ArtistLayout = () => {
     return (
@@ -29,6 +30,9 @@ const ArtistLayout = () => {
 
                     {/* Album */}
                     <Album />
+
+                    {/* About Artist */}
+                    <About />
 
                     {/* Footer */}
                     <Footer />
