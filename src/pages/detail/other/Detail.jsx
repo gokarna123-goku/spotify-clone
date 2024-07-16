@@ -1,6 +1,7 @@
 import React from 'react'
 import Sidebar from '../../main/sidebar/Sidebar'
 import Player from '../../../components/player/Player'
+import DetailLayout from './DetailLayout'
 
 const Detail = () => {
   return (
@@ -9,6 +10,7 @@ const Detail = () => {
           <Sidebar />
 
           {/* Other Detail */}
+          <DetailLayout />
 
           {/* Bottom or Player */}
           <Player />

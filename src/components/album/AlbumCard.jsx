@@ -4,7 +4,7 @@ import PlayBtn from '../playBtn/PlayBtn';
 
 const AlbumCard = ({ albumImg, albumName, albumArtist }) => {
     return (
-        <Link to={"/"} className='w-full p-3 rounded-md bg-transparent hover:bg-neutral-800/15 space-y-3 flex flex-col ease-in-out duration-100 group curspor-pointer'>
+        <Link to={"/detail"} className='w-full p-3 rounded-md bg-transparent hover:bg-neutral-800/15 space-y-3 flex flex-col ease-in-out duration-100 group curspor-pointer'>
             <div className="w-full h-auto relative">
                 <img src={albumImg} alt="album img" className="w-full aspect-square rounded-md object-cover object-center" />
                 <PlayBtn />

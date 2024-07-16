@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { IoMdPlay } from "react-icons/io";
 import PlayBtn from '../playBtn/PlayBtn';
 
 const ArtistCard = ({ artistImg, artistName, artistTag }) => {
     return (
-        <Link to={'/'} className="w-full px-3 py-2 rounded-md bg-transparent hover:bg-neutral-800/15 space-y-3 ease-in-out duration-100 group curspor-pointer">
+        <Link to={'/artist-detail'} className="w-full px-3 py-2 rounded-md bg-transparent hover:bg-neutral-800/15 space-y-3 ease-in-out duration-100 group curspor-pointer">
             {/* <img src={artistImg} alt="" className="w-full aspect-square rounded-full object-cover object-center" /> */}
             <div className="w-full h-auto relative">
                 <img src={artistImg} alt="album img" className="w-full aspect-square rounded-full object-cover object-center" />
