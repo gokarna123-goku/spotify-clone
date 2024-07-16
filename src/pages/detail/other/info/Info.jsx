@@ -15,7 +15,7 @@ const Info = () => {
                         <p className="text-sm text-neutral-100 tracking-tight font-medium">Spotify</p>
                     </div>
                     <div className="w-1 h-1 rounded-full bg-neutral-100"></div>
-                    <p className="text-sm text-neutral-100">2,270 saves</p>
+                    <p className="text-sm text-neutral-100">245,867 saves</p>
                     <div className="w-1 h-1 rounded-full bg-neutral-100"></div>
                     <p className="text-sm text-neutral-100">
                         50 songs, <span className="text-neutral-300">about 3 hr 30 min</span>
