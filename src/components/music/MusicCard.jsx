@@ -4,7 +4,7 @@ import { FaPlay } from 'react-icons/fa6'
 import { HiEllipsisHorizontal } from "react-icons/hi2";
 import { MdFavoriteBorder } from "react-icons/md";
 
-const MusicCard = ({ counter, musicImg, musicName, views, duration }) => {
+const MusicCard = ({ counter, musicImg, musicName, views, albumName, duration }) => {
     return (
         <div className="w-full grid md:grid-cols-4 grid-cols-3 gap-4 items-center rounded-md px-6 py-2 group hover:bg-neutral-600/40 ease-in-out duration-100">
             <div className="col-span-2 flex items-center gap-x-2">
@@ -22,6 +22,9 @@ const MusicCard = ({ counter, musicImg, musicName, views, duration }) => {
             <div className="col-span-1 md:flex hidden items-center justify-center">
                 <p className="text-sm text-neutral-400 font-medium group-hover:text-neutral-200 ease-in-out duration-100">
                     {views}
+                </p>
+                <p className="text-sm text-neutral-400 font-medium group-hover:text-neutral-200 ease-in-out duration-100">
+                    {albumName}
                 </p>
             </div>
             <div className="col-span-1 md:flex hidden items-center justify-end gap-x-3">

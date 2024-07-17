@@ -1,5 +1,5 @@
 // SwiperJs Carasoul breakPoints (Responsiveness)
-const breakPoints = {
+const  breakPoints = {
     '@0.00': {
         slidesPerView: 2,
     },
@@ -15,3 +15,4 @@ const breakPoints = {
 }
 
 export default breakPoints;
+

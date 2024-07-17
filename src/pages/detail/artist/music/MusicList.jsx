@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import MusicCard from '../../../../components/music/MusicCard';
+import musicData from '../../../../constant/musicData';
 
 const MusicList = () => {
     return (
@@ -10,36 +11,14 @@ const MusicList = () => {
             </h1>
             {/* Music list */}
             <div className="space-y-0">
-                <MusicCard
-                    counter={"1"}
-                    musicImg={"https://cdn.pixabay.com/photo/2024/02/26/19/51/guitar-8598823_640.jpg"}
-                    musicName={"Song Name"}
-                    views={"95,868,559"}
-                    duration={"2:50"} />
-                <MusicCard
-                    counter={"2"}
-                    musicImg={"https://cdn.pixabay.com/photo/2022/10/03/12/03/microphone-7495739_640.jpg"}
-                    musicName={"Song Name"}
-                    views={"45,868,559"}
-                    duration={"3:25"} />
-                <MusicCard
-                    counter={"3"}
-                    musicImg={"https://cdn.pixabay.com/photo/2015/07/13/02/52/girl-842719_640.jpg"}
-                    musicName={"Song Name"}
-                    views={"69,868,559"}
-                    duration={"4:30"} />
-                <MusicCard
-                    counter={"4"}
-                    musicImg={"https://cdn.pixabay.com/photo/2016/11/18/15/44/audience-1835431_640.jpg"}
-                    musicName={"Song Name"}
-                    views={"86,868,559"}
-                    duration={"3:50"} />
-                <MusicCard
-                    counter={"5"}
-                    musicImg={"https://cdn.pixabay.com/photo/2016/11/23/00/43/audio-1851517_640.jpg"}
-                    musicName={"Song Name"}
-                    views={"73,868,559"}
-                    duration={"4:40"} />
+                {musicData.map((data) => (
+                    <MusicCard
+                        counter={data.counter}
+                        musicImg={data.musicImg}
+                        musicName={data.musicName}
+                        views={data.views}
+                        duration={data.duration} />
+                ))}
             </div>
 
             {/* more */}

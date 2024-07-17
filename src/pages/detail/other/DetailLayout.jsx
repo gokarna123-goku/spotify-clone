@@ -5,6 +5,7 @@ import Info from './info/Info'
 import Like from './like/Like'
 import MusicCard from '../../../components/music/MusicCard'
 import TitleNav from './titleNav/TitleNav'
+import musicData from '../../../constant/musicData'
 
 const DetailLayout = () => {
     return (
@@ -28,66 +29,15 @@ const DetailLayout = () => {
                     <div className="w-full space-y-3">
                         <TitleNav />
 
-                        <MusicCard
-                            counter={"1"}
-                            musicImg={"https://cdn.pixabay.com/photo/2024/02/26/19/51/guitar-8598823_640.jpg"}
-                            musicName={"Song Name"}
-                            views={"Song Album Name"}
-                            duration={"2:50"} />
-                        <MusicCard
-                            counter={"2"}
-                            musicImg={"https://cdn.pixabay.com/photo/2022/10/03/12/03/microphone-7495739_640.jpg"}
-                            musicName={"Song Name"}
-                            views={"Song Album Name"}
-                            duration={"3:25"} />
-                        <MusicCard
-                            counter={"3"}
-                            musicImg={"https://cdn.pixabay.com/photo/2015/07/13/02/52/girl-842719_640.jpg"}
-                            musicName={"Song Name"}
-                            views={"Song Album Name"}
-                            duration={"4:30"} />
-                        <MusicCard
-                            counter={"4"}
-                            musicImg={"https://cdn.pixabay.com/photo/2016/11/18/15/44/audience-1835431_640.jpg"}
-                            musicName={"Song Name"}
-                            views={"Song Album Name"}
-                            duration={"3:50"} />
-                        <MusicCard
-                            counter={"5"}
-                            musicImg={"https://cdn.pixabay.com/photo/2016/11/23/00/43/audio-1851517_640.jpg"}
-                            musicName={"Song Name"}
-                            views={"Song Album Name"}
-                            duration={"4:40"} />
-                        <MusicCard
-                            counter={"1"}
-                            musicImg={"https://cdn.pixabay.com/photo/2024/02/26/19/51/guitar-8598823_640.jpg"}
-                            musicName={"Song Name"}
-                            views={"Song Album Name"}
-                            duration={"2:50"} />
-                        <MusicCard
-                            counter={"2"}
-                            musicImg={"https://cdn.pixabay.com/photo/2022/10/03/12/03/microphone-7495739_640.jpg"}
-                            musicName={"Song Name"}
-                            views={"Song Album Name"}
-                            duration={"3:25"} />
-                        <MusicCard
-                            counter={"3"}
-                            musicImg={"https://cdn.pixabay.com/photo/2015/07/13/02/52/girl-842719_640.jpg"}
-                            musicName={"Song Name"}
-                            views={"Song Album Name"}
-                            duration={"4:30"} />
-                        <MusicCard
-                            counter={"4"}
-                            musicImg={"https://cdn.pixabay.com/photo/2016/11/18/15/44/audience-1835431_640.jpg"}
-                            musicName={"Song Name"}
-                            views={"Song Album Name"}
-                            duration={"3:50"} />
-                        <MusicCard
-                            counter={"5"}
-                            musicImg={"https://cdn.pixabay.com/photo/2016/11/23/00/43/audio-1851517_640.jpg"}
-                            musicName={"Song Name"}
-                            views={"Song Album Name"}
-                            duration={"4:40"} />
+                        {/* Music Card */}
+                        {musicData.map((data) => (
+                            <MusicCard
+                                counter={data.counter}
+                                musicImg={data.musicImg}
+                                musicName={data.musicName}
+                                albumName={data.albumName}
+                                duration={data.duration} />
+                        ))}
                     </div>
 
                     {/* Footer */}
