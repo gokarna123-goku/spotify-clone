@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { GoPlusCircle } from "react-icons/go";
-import { PiShuffleBold, PiDevicesBold } from "react-icons/pi";
-import { GiPreviousButton, GiNextButton } from "react-icons/gi";
-import { IoPlaySharp } from "react-icons/io5";
-import { BiRepeat } from "react-icons/bi";
+import { PiDevicesBold } from "react-icons/pi";
 import { FiMaximize2 } from "react-icons/fi";
 import { CgMiniPlayer, CgVolume } from "react-icons/cg";
 import { HiOutlineQueueList } from "react-icons/hi2";
 import { TbMicrophone2 } from "react-icons/tb";
 import { BsFilePlay } from "react-icons/bs";
+import PlayingControl from './playing/PlayingControl';
 
 const Player = () => {
+    const [volume, setVolume] = useState(0.5); // Default volume is 50%
+
+    const handleVolumeDrag = (e) => {
+        const volumeBar = e.target;
+        const newVolume = e.nativeEvent.offsetX / volumeBar.offsetWidth;
+        setVolume(newVolume);
+    };
+
+
     return (
         <div className='w-full grid md:grid-cols-4 grid-cols-2 absolute left-0 bottom-0 rounded-md px-2'>
             {/* Artist Img, Song name */}
@@ -26,34 +33,7 @@ const Player = () => {
             </div>
 
             {/* Player control */}
-            <div className="col-span-2 flex items-center justify-center flex-col space-y-2">
-                <div className="w-full flex items-center justify-center flex-col space-y-2">
-                    <div className="flex items-center justify-center gap-x-5">
-                        <button className="text-neutral-400 hover:text-neutral-200 ease-in-out duration-100">
-                            <PiShuffleBold className='w-5 h-5' />
-                        </button>
-                        <button className="text-neutral-400 hover:text-neutral-200 ease-in-out duration-100">
-                            <GiPreviousButton className='w-5 h-5' />
-                        </button>
-                        <button className="w-8 h-8 rounded-full bg-neutral-200 text-neutral-900 flex items-center justify-center">
-                            <IoPlaySharp className='w-5 h-5 ml-1' />
-                        </button>
-                        <button className="text-neutral-400 hover:text-neutral-200 ease-in-out duration-100">
-                            <GiNextButton className='w-5 h-5' />
-                        </button>
-                        <button className="text-neutral-400 hover:text-neutral-200 ease-in-out duration-100">
-                            <BiRepeat className='rotate-180 w-5 h-5' />
-                        </button>
-                    </div>
-                    <div className="md:w-3/4 w-full flex items-center justify-center gap-x-3">
-                        <p className="text-xs text-neutral-400 font-medium">0:00</p>
-                        <div className="flex-1 h-1 bg-neutral-800/30 rounded-full">
-                            <div className="w-1/3 h-1 bg-neutral-100 hover:bg-green-600 rounded-full ease-in-out duration-100"></div>
-                        </div>
-                        <p className="text-xs text-neutral-400 font-medium">0:00</p>
-                    </div>
-                </div>
-            </div>
+            <PlayingControl />
 
             {/* Volume control */}
             <div className="w-full col-span-1 md:flex hidden items-center justify-end gap-x-3">
@@ -71,8 +51,11 @@ const Player = () => {
                 </button>
                 <button className="w-[30%] flex items-center gap-x-2 text-neutral-400 hover:text-neutral-200 ease-in-out duration-100">
                     <CgVolume className='w-5 h-5' />
-                    <div className="flex-1 h-1 bg-neutral-800/30 rounded-full">
-                        <div className="w-10/12 h-1 bg-neutral-100 hover:bg-green-600 rounded-full ease-in-out duration-100"></div>
+                    <div className="flex-1 h-1 bg-neutral-700/60 rounded-full">
+                        <div
+                            className="h-1 bg-green-600 ease-in-out duration-100 rounded-full"
+                            style={{ width: `${volume * 100}%` }}
+                        ></div>
                     </div>
                 </button>
                 <button className="text-neutral-400 hover:text-neutral-200 ease-in-out duration-100">
@@ -82,7 +65,6 @@ const Player = () => {
                     <FiMaximize2 className='w-4 h-4' />
                 </button>
             </div>
-
         </div>
     )
 }
