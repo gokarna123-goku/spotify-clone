@@ -19,6 +19,7 @@ const MusicCard = ({ counter, musicImg, musicName, views, albumName, duration })
                     {musicName}
                 </Link>
             </div>
+            
             <div className="col-span-1 md:flex hidden items-center justify-center">
                 <p className="text-sm text-neutral-400 font-medium group-hover:text-neutral-200 ease-in-out duration-100">
                     {views}
@@ -27,6 +28,7 @@ const MusicCard = ({ counter, musicImg, musicName, views, albumName, duration })
                     {albumName}
                 </p>
             </div>
+
             <div className="col-span-1 md:flex hidden items-center justify-end gap-x-3">
                 <p className='w-6 text-neutral-400 flex items-center justify-end mr-4'>
                     <MdFavoriteBorder className='group-hover:block hidden text-xl' />
@@ -36,6 +38,7 @@ const MusicCard = ({ counter, musicImg, musicName, views, albumName, duration })
                     <HiEllipsisHorizontal className='group-hover:block hidden text-2xl' />
                 </p>
             </div>
+
             <div className="col-span-1 md:hidden flex justify-end">
                 <p className='w-6 text-neutral-200 flex items-center justify-end'>
                     <HiEllipsisHorizontal className='text-2xl' />
