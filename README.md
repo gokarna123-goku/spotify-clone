@@ -76,7 +76,7 @@ Live Demo:-
 
 ## Author
 
-- [@gtechofficial08](https://github.com/gokarna123-goku)
+- [Gokarna Adhikari](https://github.com/gokarna123-goku)
 
 
 ## Acknowledgements
